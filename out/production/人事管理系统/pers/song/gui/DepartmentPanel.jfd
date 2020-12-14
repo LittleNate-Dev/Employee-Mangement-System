@@ -1,0 +1,95 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.8" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"rows": 2
+				"hgap": 50
+			} ) {
+				name: "upPanel"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) {
+					"hgap": 50
+				} ) {
+					name: "topPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "deptLabel"
+						"text": "部门名"
+						"font": new java.awt.Font( "Microsoft YaHei UI", 0, 20 )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "West"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "deptBox"
+						"font": new java.awt.Font( "Microsoft YaHei UI", 0, 20 )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPanel"
+					"horizontalScrollBarPolicy": 32
+					"verticalScrollBarPolicy": 21
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+						"hgap": 50
+					} ) {
+						name: "buttonPanel"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "searchButton"
+							"text": "查询"
+							"font": new java.awt.Font( "Microsoft YaHei UI", 0, 20 )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchButtonActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "searchAllButton"
+							"text": "查询全部"
+							"font": new java.awt.Font( "Microsoft YaHei UI", 0, 20 )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchAllButtonActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "deleteButton"
+							"text": "删除选中行"
+							"font": new java.awt.Font( "Microsoft YaHei UI", 0, 20 )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteButtonActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "updateButton"
+							"text": "更新选中行"
+							"font": new java.awt.Font( "Microsoft YaHei UI", 0, 20 )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "updateButtonActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "insertButton"
+							"text": "添加选中行"
+							"font": new java.awt.Font( "Microsoft YaHei UI", 0, 20 )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "insertButtonActionPerformed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "addNewRow"
+							"text": "新建行"
+							"font": new java.awt.Font( "Microsoft YaHei UI", 0, 20 )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addNewRowActionPerformed", true ) )
+						} )
+					} )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "downPanel"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "resultTable"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 30 )
+					"rowHeight": 30
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1050, 585 )
+		} )
+	}
+}

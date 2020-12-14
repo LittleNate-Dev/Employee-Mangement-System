@@ -1,0 +1,59 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.8" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/pers/Song/resources/picture/Manger.png" )
+			"title": "社畜管理器"
+			"minimumSize": new java.awt.Dimension( 1100, 810 )
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosed", "thisWindowClosed", true ) )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane"
+				"horizontalScrollBarPolicy": 32
+				"verticalScrollBarPolicy": 21
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+					"hgap": 100
+				} ) {
+					name: "buttonPanel"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "employeeButton"
+						"text": "员工管理"
+						"font": new java.awt.Font( "Microsoft YaHei UI", 0, 26 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "employeeButtonActionPerformed", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "employeeButtonActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "departmentButton"
+						"text": "部门管理"
+						"font": new java.awt.Font( "Microsoft YaHei UI", 0, 26 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "departmentButtonActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "positionButton"
+						"text": "职位管理"
+						"font": new java.awt.Font( "Microsoft YaHei UI", 0, 26 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "positionButtonActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "exitButton"
+						"text": "退出登录"
+						"font": new java.awt.Font( "Microsoft YaHei UI", 0, 26 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "exitButtonActionPerformed", true ) )
+					} )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+				name: "mainPanel"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 10 )
+			"size": new java.awt.Dimension( 1075, 785 )
+		} )
+	}
+}
